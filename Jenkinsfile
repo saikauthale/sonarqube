@@ -3,9 +3,8 @@ pipeline {
     agent any
 
     tools {
-
-        sonarQube 'SonarScanner'
-
+    jdk 'JDK17'
+}
     }
 
     environment {
