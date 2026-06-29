@@ -2,9 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Clone') {
             steps {
-                echo 'Jenkins is working!'
+                git branch: 'main', url: 'https://github.com/saikauthale/sonarqube.git'
+            }
+        }
+
+        stage('List Files') {
+            steps {
+                sh 'pwd'
+                sh 'ls -la'
             }
         }
     }
